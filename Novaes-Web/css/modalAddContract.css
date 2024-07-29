@@ -1,0 +1,40 @@
+#modalAddContract{
+    border: 0.5px solid black;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #F9F9F9;
+    border-radius: 10px;
+}
+.inputGroup{
+    width: 100%;
+    display: flex;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.inputGroup > input{
+    width: 85%;
+    margin-left: 10px;
+    background-color: white;
+    border-radius: 5px;
+    border: solid 1px #b5b5b5;
+}
+.inputGroup > label{
+    width: 10%;
+}
+
+#btnAddContract{
+    background-color: #1e3050;
+    width: 45%;
+    height: 30px;
+    color: white;
+    border: none;
+    text-align: center;
+    font-size: 13pt;
+    border-radius: 5px;
+}
