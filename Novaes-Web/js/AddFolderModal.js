@@ -1,32 +1,26 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const addFolderBtn = document.getElementById('addFolderBtn');
-    const folderModal = document.getElementById('folderModal');
-    const closeModalBtn = document.getElementById('closeModalBtn');
-    const cancelBtn = document.getElementById('cancelBtn');
-    const folderForm = document.getElementById('folderForm');
+function showModal() {
+    document.getElementById('AddFolderModal').style.display = 'block';
+}
 
-    addFolderBtn.addEventListener('click', function () {
-        folderModal.style.display = 'block';
-    });
 
-    closeModalBtn.addEventListener('click', function () {
-        folderModal.style.display = 'none';
-    });
+function hideModal() {
+    document.getElementById('AddFolderModal').style.display = 'none';
+}
 
-    cancelBtn.addEventListener('click', function () {
-        folderModal.style.display = 'none';
-    });
+function saveButton() {
+    console.log('Salvar');
+    hideModal();
+}
 
-    window.addEventListener('click', function (event) {
-        if (event.target === folderModal) {
-            folderModal.style.display = 'none';
-        }
-    });
+function showModalFile() {
+    document.getElementById('AddFolderModalFile').style.display = 'block';
+}
 
-    folderForm.addEventListener('submit', function (event) {
-        event.preventDefault();
-        const folderName = document.getElementById('folderName').value;
-        alert(`Pasta '${folderName}' salva!`);
-        folderModal.style.display = 'none';
-    });
-});
+function hideModalFile() {
+    document.getElementById('AddFolderModalFile').style.display = 'none';
+}
+
+function saveButtonFile() {
+    console.log('Salvar arquivo');
+    hideModalFile();
+}

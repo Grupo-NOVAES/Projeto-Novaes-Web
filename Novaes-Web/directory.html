@@ -23,7 +23,7 @@
 <body>
 
 	<header class="d-flex justfy-content-btween align-itens-center p-3 text-white">
-        <img id="logo" src="/img/LogoWhite.png" alt="Novaes Logo" height="50px" width="200px">
+        <img id="logo" src="img/LogoWhite.png" alt="Novaes Logo" height="50px" width="200px">
         <section id="links">
             <a class="a_links" href="https://gruponovaes.com/" >HOME</a>
 
@@ -111,7 +111,7 @@
               </span>
             </label>
           </div>
-          <a class="btnProfile" id="btnprofile" href="/profile.html">
+          <a class="btnProfile" id="btnprofile" href="profile.html">
             <i class="fa-solid fa-circle fa-2xl" style="color: #b0b0b0;"></i>
             <p id="nomeUser" th:text="${user.name}">Luciano</p> 
             <button class="Btn">
@@ -144,7 +144,7 @@
       </div>
 
       <div class="btnCreate">
-        <button class="CartBtn">
+        <button class="CartBtn" onclick="showModalFile()">
           <span class="IconContainer">             
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#989EA7" d="M0 64C0 28.7 28.7 0 64 0L224 0l0 128c0 17.7 14.3 32 32 32l128 0 0 288c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 64zm384 64l-128 0L256 0 384 128z"/></svg>          </span>
           <p class="text">Adicionar Arquivo</p>
@@ -152,11 +152,48 @@
       </div>
 
       <div class="btnCreate">
-        <button class="CartBtn">
+        <button class="CartBtn" onclick="showModal()">
           <span class="IconContainer">             
             <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512" fill="rgb(17, 17, 17)" class="cart"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#FFD43B" d="M64 480H448c35.3 0 64-28.7 64-64V160c0-35.3-28.7-64-64-64H288c-10.1 0-19.6-4.7-25.6-12.8L243.2 57.6C231.1 41.5 212.1 32 192 32H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64z"/></svg>          </span>
           <p class="text">Adicionar Pasta</p>
         </button>
+      </div>
+    </div>
+
+    <div class="AddFolderModal" id="AddFolderModal">
+      <div class="labelinput">
+        <label for="name">Nome da Pasta</label>
+        <input type="text" id="name" class="input">
+      </div>
+     
+      <div class="actions">
+        <button class="savebtn" onclick="saveButton()">Salvar</button>
+        <p onclick="hideModal()">Cancelar</p>
+      </div>
+    </div>
+
+    <div class="AddFolderModalFile" id="AddFolderModalFile">
+      <div class="labelinput">
+        <form class="file-upload-form">
+          <label for="file" class="file-upload-label">
+            <div class="file-upload-design">
+              <svg viewBox="0 0 640 512" height="1em">
+                <path
+                  d="M144 480C64.5 480 0 415.5 0 336c0-62.8 40.2-116.2 96.2-135.9c-.1-2.7-.2-5.4-.2-8.1c0-88.4 71.6-160 160-160c59.3 0 111 32.2 138.7 80.2C409.9 102 428.3 96 448 96c53 0 96 43 96 96c0 12.2-2.3 23.8-6.4 34.6C596 238.4 640 290.1 640 352c0 70.7-57.3 128-128 128H144zm79-217c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l39-39V392c0 13.3 10.7 24 24 24s24-10.7 24-24V257.9l39 39c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-80-80c-9.4-9.4-24.6-9.4-33.9 0l-80 80z"
+                ></path>
+              </svg>
+              <p>Arraste e solte</p>
+              <p>ou</p>
+              <span class="browse-button">Buscar Arquivo</span>
+            </div>
+            <input id="file" type="file" />
+          </label>
+        </form>
+      </div>       
+     
+      <div class="actions">
+        <button class="savebtn" onclick="saveButtonFile()">Salvar</button>
+        <p onclick="hideModalFile()">Cancelar</p>
       </div>
     </div>
     
