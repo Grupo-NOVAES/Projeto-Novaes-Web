@@ -158,10 +158,10 @@ main {
 }
 
 .profilePhotoIcon{
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    border: 1px solid black;
+    width: 60px;
+    height: 60px;
+    border-radius: 70px;
+    border: 0.5px solid rgba(0, 0, 0, 0.658);
 }
 
 table {
