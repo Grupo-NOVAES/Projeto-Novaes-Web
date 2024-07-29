@@ -487,10 +487,61 @@ tr {
 }
 /*componente*/
 
-
-
-
 /*modal arquivo*/
+
+
+/*Edit Modal Folder*/
+.EditModalFolder {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 1.5px 1.5px 4px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  z-index: 1;
+  background-color: #F9F9F9;
+  color: #1e3050;
+}
+
+.EditModalFolder label, .EditModalFolder input, .EditModalFolder button, .EditModalFolder p {
+  display: block;
+  margin: 10px 0;
+}
+
+.EditModalFolder button, .EditModalFolder p {
+  cursor: pointer;
+}
+
+.EditModalFolder .actions {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.EditModalFolder .labelinput {
+  position: relative;
+  padding-left: 45px;
+}
+
+.EditModalFolder .savebtn {
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  border: none;
+  background-color: #1e3050;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+/*Edit Modal Folder*/
 
 
 

@@ -162,7 +162,7 @@
 
     <div class="AddFolderModal" id="AddFolderModal">
       <div class="labelinput">
-        <label for="name">Nome da Pasta</label>
+        <label for="name">Adicionar Pasta</label>
         <input type="text" id="name" class="input">
       </div>
      
@@ -325,8 +325,21 @@
 			
       <div id="context-menu" class="context-menu">
         <a><button class="btnOption"><i class="fa-solid fa-download fa-flip-horizontal fa-sm" style=" color: #1e3050;"></i> Baixar</button></a>
-        <a><button class="btnOption"><i class="fa-solid fa-pencil fa-sm"style=" color: #1e3050;"></i> Renomear</button></a>
+        <a><button onclick="showModalFolderName()" class="btnOption"><i class="fa-solid fa-pencil fa-sm"style=" color: #1e3050;"></i> Renomear</button></a>
         <a><button class="btnOption"> <i class="fa-solid fa-trash fa-sm"style=" color: #1e3050;"></i>Deletar</button></a>
+      </div>
+
+
+      <div class="EditModalFolder" id="EditModalFolder">
+        <div class="labelinput">
+          <label for="nameFolder">Renomear Pasta</label>
+          <input type="text" class="input" id="name">
+        </div>
+
+        <div class="actions">
+          <button class="savebtn" onclick="saveButtonEditFolder()">Salvar</button>
+          <p onclick="hideModalEdit()">Sair</p>
+        </div>
       </div>
 
 		</main>
